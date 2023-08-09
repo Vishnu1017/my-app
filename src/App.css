@@ -183,6 +183,24 @@ body{
   }
 }
 
-.custom-input {
-  padding: 0%;
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%; /* Adjust the container width for smaller screens */
+    margin: auto;
+  }
+
+  .humidity .wind .uv-index{
+    font-size: 10px;
+  }
+
+  .placeholder{
+    font-size: 1px;
+  }
+
+  .search-box input {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  /* Adjust other styles as needed for smaller screens */
 }

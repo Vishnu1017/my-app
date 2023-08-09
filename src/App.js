@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faMagnifyingGlass,faWater, faWind } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faMagnifyingGlass, faWater, faWind, faSun } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import clearImage from './images/clear.png';
 import rainImage from './images/rain.png';
@@ -90,23 +90,25 @@ function WeatherApp() {
                     </div>
                     <div className="weather-details fadeIn">
                         <div className="humidity">
-                          <i><FontAwesomeIcon icon={faWater} /></i>
+                            <i><FontAwesomeIcon icon={faWater} /></i>
                             <div className="text">
                                 <span>{weatherData.main.humidity}%</span>
                                 <p>Humidity</p>
                             </div>
                         </div>
                         <div className="wind">
-                          <i><FontAwesomeIcon icon={faWind} /></i>
+                            <i><FontAwesomeIcon icon={faWind} /></i>
                             <div className="text">
                                 <span>{parseInt(weatherData.wind.speed)} Km/h</span>
                                 <p>Wind Speed</p>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
-            )}
-        </div>
+    )
+}
+        </div >
     );
 }
 
