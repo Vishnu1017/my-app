@@ -7,7 +7,7 @@
 }
 
 body{
-  height: 95vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ body{
   width: 400px;
   height: 105px;
   background: #fff;
-  padding: 28px 32px;
+  padding: 18px 32px;
   overflow: hidden;
   border-radius: 18px;
   font-family: 'Roboto', sans-serif;
@@ -183,15 +183,25 @@ body{
   }
 }
 
+.sunrise-sunset{
+  color: #06283D;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 844px) {
   .container {
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
   }
-
-  .body{
-    height: 10vh;
+  .search-box input::placeholder{
+    font-size: 16px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+    margin: auto;
   }
 
   .humidity .wind .uv-index{
@@ -208,3 +218,4 @@ body{
 
   /* Adjust other styles as needed for smaller screens */
 }
+
