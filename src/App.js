@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faMagnifyingGlass, faWater, faWind, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faMagnifyingGlass, faWater, faWind } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import clearImage from './images/clear.png';
 import rainImage from './images/rain.png';
@@ -13,6 +13,8 @@ function WeatherApp() {
     const [city, setCity] = useState('');
     const [weatherData, setWeatherData] = useState(null);
     const [error, setError] = useState(false);
+    const [sunrise, setSunrise] = useState(null);
+    const [sunset, setSunset] = useState(null);
 
     const weatherImageMap = {
         Clear: clearImage,
@@ -41,14 +43,24 @@ function WeatherApp() {
             } else {
                 setError(false);
                 setWeatherData(json);
+
+                // Fetch sunrise and sunset times
+                setSunrise(new Date(json.sys.sunrise * 1000));
+                setSunset(new Date(json.sys.sunset * 1000));
             }
         } catch (error) {
             console.error('Error fetching weather data:', error);
         }
     };
 
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSearchClick();
+        }
+    };
+
     const containerStyle = {
-        height: weatherData || error ? '590px' : '105px', // Adjust the height here
+        height: weatherData || error ? '630px' : '100px', // Adjust the height here
         transition: '0.6s ease-out'
     };
 
@@ -62,6 +74,7 @@ function WeatherApp() {
                     className="custom-input"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
+                    onKeyPress={handleKeyPress}
                 />
                 <button className="search-button" onClick={handleSearchClick}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -103,12 +116,14 @@ function WeatherApp() {
                                 <p>Wind Speed</p>
                             </div>
                         </div>
-                        
+                    </div>
+                    <div className="sunrise-sunset">
+                        <p className="sunrise-animation">Sunrise: {sunrise && sunrise.toLocaleTimeString()}</p>
+                        <p className="sunset-animation">Sunset: {sunset && sunset.toLocaleTimeString()}</p>
                     </div>
                 </div>
-    )
-}
-        </div >
+            )}
+        </div>
     );
 }
 
