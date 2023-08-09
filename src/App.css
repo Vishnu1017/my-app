@@ -7,7 +7,7 @@
 }
 
 body{
-  height: 100vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,10 +184,14 @@ body{
 }
 
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 844px) {
   .container {
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
+  }
+
+  .body{
+    height: 10vh;
   }
 
   .humidity .wind .uv-index{
