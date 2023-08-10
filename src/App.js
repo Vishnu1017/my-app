@@ -112,8 +112,8 @@ function WeatherApp() {
                         <div className="wind">
                             <i><FontAwesomeIcon icon={faWind} /></i>
                             <div className="text">
-                                <span>{parseInt(weatherData.wind.speed)} Km/h</span>
-                                <p>Wind Speed</p>
+                            <span className="small-font" >{parseInt(weatherData.wind.speed)} Km/h</span>                                
+                            <p>Wind Speed</p>
                             </div>
                         </div>
                     </div>

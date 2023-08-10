@@ -124,7 +124,6 @@ body{
 }
 
 .weather-details .wind{
-  padding-right: 20px;
   justify-content: flex-end;
 }
 
@@ -192,12 +191,26 @@ body{
 }
 
 /* Responsive styles */
-@media screen and (max-width: 844px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
     padding-top: 25px;
   }
+
+  .wind{
+    padding-left: 10px;
+  }
+
+  .sunrise-sunset{
+    padding-top: 10px;
+    font-size: 15px;
+  }
+
+  .description {
+    font-size: 5px;
+  }
+
   .search-box input::placeholder{
     font-size: 13.5px;
     font-weight: 250;
