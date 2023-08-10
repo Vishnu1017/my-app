@@ -195,8 +195,8 @@ body{
   .container {
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
-    padding-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 30px;
+    bottom: 2.8rem;
   }
 
   .weather-details .humidity, .weather-details .wind{
