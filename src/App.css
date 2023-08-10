@@ -195,19 +195,17 @@ body{
   .container {
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
+    padding-top: 25px;
+    margin-bottom: 25px;
   }
 
   .weather-details .humidity, .weather-details .wind{
     padding: 0%;
   }
 
-  .wind{
-    padding-left: 10px;
-  }
-
   .sunrise-sunset{
     padding-top: 10px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .description {
