@@ -60,7 +60,7 @@ function WeatherApp() {
     };
 
     const containerStyle = {
-        height: weatherData || error ? '630px' : '100px', // Adjust the height here
+        height: weatherData || error ? '630px' : '110px', // Adjust the height here
         transition: '0.6s ease-out'
     };
 
