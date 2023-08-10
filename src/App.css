@@ -119,10 +119,12 @@ body{
 
 .weather-details .humidity{
   justify-content: flex-start;
+  padding-left: 30px;
 }
 
 .weather-details .wind{
-  justify-content: flex-start;
+  justify-content: flex-end;
+  padding-right: 25px;
 }
 
 .weather-details i{
@@ -193,7 +195,10 @@ body{
   .container {
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
-    padding-top: 20px;
+  }
+
+  .weather-details .humidity, .weather-details .wind{
+    padding: 0%;
   }
 
   .wind{
@@ -214,10 +219,6 @@ body{
     font-weight: 250;
     text-transform: capitalize;
     margin: auto;
-  }
-
-  .humidity .wind .uv-index{
-    font-size: 1px;
   }
 
   .search-box input {
