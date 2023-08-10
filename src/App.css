@@ -195,9 +195,10 @@ body{
   .container {
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
+    padding-top: 25px;
   }
   .search-box input::placeholder{
-    font-size: 13px;
+    font-size: 13.5px;
     font-weight: 250;
     text-transform: capitalize;
     margin: auto;
