@@ -7,7 +7,7 @@
 }
 
 body{
-  height: 115vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,6 +196,7 @@ body{
     width: 90%; /* Adjust the container width for smaller screens */
     margin: auto;
     padding-top: 25px;
+    height: 110vh;
   }
   .search-box input::placeholder{
     font-size: 13.5px;
